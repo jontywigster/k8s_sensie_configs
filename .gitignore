@@ -1,0 +1,12 @@
+# Ignore Helm chart artifacts
+*.tgz
+
+# Ignore Kubernetes secrets and sensitive files
+*.secret.yaml
+*.config.yaml
+
+# Ignore IDE-specific files
+.vscode/
+
+# Ignore log files
+*.log
