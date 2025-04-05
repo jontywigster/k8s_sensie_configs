@@ -2,10 +2,13 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../base
   - metallb.yml
 
-configMapGenerator:
-  - name: metallb-config
-    literals:
-      - ipAddressPool=${IP_ADDRESS_POOL}
+vars:
+  - name: IP_ADDRESS_POOL
+    objref:
+      kind: IPAddressPool
+      name: my-ip-pool
+      apiVersion: metallb.io/v1beta1
+    fieldref:
+      fieldpath: spec.addresses[0]

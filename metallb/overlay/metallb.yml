@@ -5,7 +5,7 @@ metadata:
   name: my-ip-pool
 spec:
   addresses:
-  - ${IP_ADDRESS_POOL}
+  - "WILL_BE_REPLACED"
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
