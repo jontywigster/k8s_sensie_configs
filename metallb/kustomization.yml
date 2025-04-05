@@ -6,9 +6,8 @@ namespace: metallb-system
 commonLabels:
   environment: production
 
-#resources:
-#  - namespace.yaml # Define the MetalLB namespace if needed
-#  - custom-config.yaml # Your custom MetalLB YAML configurations (e.g., IPAddressPool, L2Advertisement)
+resources:
+  - metallb_config.yml
 
 helmCharts:
   - name: metallb
